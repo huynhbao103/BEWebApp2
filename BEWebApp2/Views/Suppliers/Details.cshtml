@@ -1,0 +1,27 @@
+﻿@model BEWebApp2.Models.Supplier
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Supplier</h4>
+    <hr />
+    <div>
+        <div class="col-sm-4">
+            <h1>@Html.DisplayFor(model => model.SupName)</h1>
+            @Html.DisplayFor(model => model.Address)
+        </div>
+        <div class="col-sm-8">
+            <h1>DANH SÁCH SẢN PHẨM CUNG CẤP</h1>
+
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SupID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

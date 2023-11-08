@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BEWebApp2.Models.Color>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MÀU SẢN PHẨM</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            TÊN MÀU
+        </th>
+        <th>
+            MÃ MÀU
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ColorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RGB)
+            <span style="background-color:@Url.Content(item.RGB)">Màu</span>
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.ColorID }, new { @class = "btn btn-sm btn-success" } ) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.ColorID }, new { @class = "btn btn-sm btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-primary" })
+</p>

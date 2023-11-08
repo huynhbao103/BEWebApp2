@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4025c256f6fd48c9a89e255c8db20466" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="StoreMgmtModel.Category" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.Color" Width="1.5" PointX="7.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.Customer" Width="1.5" PointX="0.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.Order" Width="1.5" PointX="2.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.OrderDetail" Width="1.5" PointX="5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.ProDetail" Width="1.5" PointX="5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.Product" Width="1.5" PointX="2.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.Supplier" Width="1.5" PointX="7.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.sysdiagram" Width="1.5" PointX="7.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreMgmtModel.User" Width="1.5" PointX="0.5" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="StoreMgmtModel.FK_Pro_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreMgmtModel.FK__ProDetail__Color__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreMgmtModel.FK__Order__CusPhone__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreMgmtModel.FK__OrderDeta__Order__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreMgmtModel.FK__OrderDeta__ProSu__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreMgmtModel.FK__ProDetail__ProID__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreMgmtModel.FK__ProDetail__SupID__33D4B598" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<BEWebApp2.Models.Supplier>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>QUẢN LÝ NHÀ CUNG CÁP</h2>
+<hr />
+<table class="table">
+    <tr>
+        <th>
+            TÊN NHÀ CUNG CẤP
+        </th>
+        <th>
+            ĐỊA CHỈ
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.ActionLink("Chi tiết", "Details", new { id = item.SupID }, new { @class = "btn btn-sm btn-info" }) |
+            @Html.ActionLink("Sửa", "Edit", new { id = item.SupID }, new { @class = "btn btn-sm btn-success" }) |
+            @Html.ActionLink("Xóa", "Delete", new { id = item.SupID }, new { @class = "btn btn-sm btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-primary" })
+</p>

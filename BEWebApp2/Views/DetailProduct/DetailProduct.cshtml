@@ -1,0 +1,147 @@
+﻿@model BEWebApp2.Models.ViewModel.DetailProductVM
+
+@{
+    ViewBag.Title = "DetailProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailProduct</h2>
+
+<div>
+    <h4>DetailProductVM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RemainQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RemainQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoldQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoldQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ViewQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViewQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameDecription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameDecription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CatID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CatID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameCate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameCate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RGB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RGB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProDeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,19 @@
+﻿@model BEWebApp2.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>QUẢN LÝ THÔNG TIN SẢN PHẨM</h2>
+<h3 style="color:blue">Cập nhật thông tin</h3>
+<hr />
+
+@Html.Partial("ProInfoPartial",Model)
+
+
+<p style="text-align: center">
+    @Html.ActionLink("Cập nhật", "Edit", new { id = Model.ProID }, new {@class="btn btn-primary"})
+    @Html.ActionLink("Danh sách", "Index", null, new { @class = "btn btn-info" })
+    @Html.ActionLink("Chi tiết hàng tồn", "Index", "ProDetails", new { @class = "btn btn-warning" })
+</p>

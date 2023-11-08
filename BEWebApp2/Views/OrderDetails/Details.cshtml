@@ -1,0 +1,61 @@
+﻿@model BEWebApp2.Models.OrderDetail
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết đơn hàng</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProDetail.Product.ProName)
+        </dd>
+
+        <dt>
+            Tên nhà cung cấp
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProDetail.Supplier.SupName)
+        </dd>
+
+        <dt>
+            Màu sắc
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProDetail.Color.ColorName)
+        </dd>
+
+        <dt>
+            Số lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+
+        <dt>
+            Đơn giá
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProDetail.Price)
+        </dd>
+
+        <dt>
+            Thành tiền
+        </dt>
+
+        <dd
+             @Html.DisplayFor(modelItem => Model.Order.TotalValue)
+        </dd>
+    </dl>
+</div>

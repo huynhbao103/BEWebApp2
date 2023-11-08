@@ -1,0 +1,73 @@
+﻿@model IEnumerable<BEWebApp2.Models.ProDetail>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>QUẢN LÝ KHO HÀNG</h2>
+<hr />
+
+<table class="table">
+    <tr>
+        <th>
+            SẢN PHẨM
+        </th>
+        <th>
+            NHÀ CUNG CẤP
+        </th>
+        <th>
+            MÀU SẮC
+        </th>
+        <th>
+            ĐƠN GIÁ
+        </th>
+        <th>
+            SỐ LƯỢNG TỒN
+        </th>
+        <th>
+            SỐ LƯỢNG ĐÃ BÁN
+        </th>
+        <th>
+            SỐ LƯỢT XEM
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier.SupName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color.ColorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RemainQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoldQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViewQuantity)
+            </td>
+
+            <td>
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.ProDeID }, new { @class = "btn btn-sm btn-info" }) |
+                @Html.ActionLink("Sửa", "Edit", new { id = item.ProDeID }, new { @class = "btn btn-sm btn-success" }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.ProDeID }, new { @class = "btn btn-sm btn-danger" })
+            </td>
+        </tr>
+    }
+</table>
+<p>
+    @Html.ActionLink("Thêm mới", "Create", null, new { @class = "btn btn-primary" })
+</p>

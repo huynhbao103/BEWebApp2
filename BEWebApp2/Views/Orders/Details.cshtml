@@ -1,0 +1,106 @@
+﻿@model BEWebApp2.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã ĐH
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderID)
+        </dd>
+        <dt>
+            Tên KH
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CusName)
+        </dd>
+        <dt>
+            Ngày Mua
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDate)
+        </dd>
+
+        <dt>
+            Tổng GT
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalValue)
+        </dd>
+
+    </dl>
+</div>
+
+
+    <h2>Chi tiết đơn hàng</h2>
+
+    <table class="table">
+        <tr>
+            <th>
+                Tên SP
+            </th>
+            <th>
+                Tên NCC
+            </th>
+            <th>
+                Màu sắc
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Đơn giá
+            </th>
+            <th>
+                Thành tiền
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in @Model.OrderDetails)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProDetail.Product.ProName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProDetail.Supplier.SupName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProDetail.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProDetail.Price)
+                </td>
+                <td>
+                    @{
+                        var totalValue = item.Quantity * item.ProDetail.Price;
+                    }
+
+                    @Html.DisplayFor(modelItem => totalValue)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.OrderDetailID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.OrderDetailID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OrderDetailID })
+                </td>
+            </tr>
+        }
+
